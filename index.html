@@ -16,19 +16,7 @@
         <button class="bat" onclick="
             console.log('You chose Bat!')
             //This will generate random no between 0 and 3
-            let randomNumber = Math.random() * 3;
-            let computerChoice;
-            let resultmsg;
-            if (randomNumber>0 && randomNumber<1) {
-                // console.log('Computer chose Bat!')
-                computerChoice = 'Bat';
-            } else if (randomNumber>1 && randomNumber<2) {
-                // console.log('Computer chose Ball!')
-                computerChoice = 'Ball';
-            } else if (randomNumber>2 && randomNumber<3) {
-                // console.log('Computer chose Stump!')
-                computerChoice = 'Stump';
-            }
+            generateComputerChoice();
 
             const computerchoicemsg = 'Computer chose ' + computerChoice;
 
@@ -50,19 +38,7 @@
         <button class="ball" onclick="
             console.log('You chose Ball!')
             //This will generate random no between 0 and 3
-            randomNumber = Math.random() * 3;
-            // computerChoice;
-            // resultmsg;
-            if (randomNumber>0 && randomNumber<1) {
-                // console.log('Computer chose Bat!')
-                computerChoice = 'Bat';
-            } else if (randomNumber>1 && randomNumber<2) {
-                // console.log('Computer chose Ball!')
-                computerChoice = 'Ball';
-            } else if (randomNumber>2 && randomNumber<3) {
-                // console.log('Computer chose Stump!')
-                computerChoice = 'Stump';
-            }
+            generateComputerChoice();
 
             computerchoicemsg = 'Computer chose ' + computerChoice;
 
@@ -84,19 +60,7 @@
         <button class="stump" onclick="
             console.log('You chose Stump!')
             //This will generate random no between 0 and 3
-            randomNumber = Math.random() * 3;
-            // computerChoice;
-            // resultmsg;
-            if (randomNumber>0 && randomNumber<1) {
-                // console.log('Computer chose Bat!')
-                computerChoice = 'Bat';
-            } else if (randomNumber>1 && randomNumber<2) {
-                // console.log('Computer chose Ball!')
-                computerChoice = 'Ball';
-            } else if (randomNumber>2 && randomNumber<3) {
-                // console.log('Computer chose Stump!')
-                computerChoice = 'Stump';
-            }
+            generateComputerChoice();
 
             computerchoicemsg = 'Computer chose ' + computerChoice;
 
@@ -117,6 +81,6 @@
             ">Stump</button>
 
     </div>
-    <script></script>
-</body>
+    <script src="index.js"></script>
+    </body>
 </html>
