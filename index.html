@@ -5,82 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket Game</title>
     <link rel="stylesheet" href="index.css">
-    <style>
-        
-    </style>
 </head>
 <body>
     <H1>Bat Ball Stump Game</H1>
     <div class="button">
         
         <button class="bat" onclick="
-            console.log('You chose Bat!')
+            // console.log('You chose Bat!')
             //This will generate random no between 0 and 3
             generateComputerChoice();
-
             const computerchoicemsg = 'Computer chose ' + computerChoice;
-
-            console.log('Computer chose ' + computerChoice)
-            if (computerChoice === 'Bat') {
-                resultmsg = 'It\'s a tie!';
-            } else if (computerChoice === 'Ball') {
-                resultmsg = 'You win!';
-            } else if (computerChoice === 'Stump') {
-                resultmsg = 'You lose!';
-            }
-            console.log(resultmsg)
-
-            alert(`You chose Bat!\nComputer chose ${computerChoice}.\n${resultmsg}`)
-
-
+            // console.log('Computer chose ' + computerChoice)
+            resultmsg = getResult('Bat', computerChoice);
+            // console.log(resultmsg)
+            showResult('Bat', computerChoice, resultmsg);
             ">Bat</button>
 
         <button class="ball" onclick="
-            console.log('You chose Ball!')
+            // console.log('You chose Ball!')
             //This will generate random no between 0 and 3
             generateComputerChoice();
-
             computerchoicemsg = 'Computer chose ' + computerChoice;
-
-            console.log('Computer chose ' + computerChoice)
-            if (computerChoice === 'Bat') {
-                resultmsg = 'You lose!';
-            } else if (computerChoice === 'Ball') {
-                resultmsg = 'It\'s a tie!';
-            } else if (computerChoice === 'Stump') {
-                resultmsg = 'You win!';
-            }
-
-            console.log(resultmsg)
-
-            alert(`You chose Ball!\nComputer chose ${computerChoice}.\n${resultmsg}`)
-
+            // console.log('Computer chose ' + computerChoice)
+            resultmsg = getResult('Ball', computerChoice);
+            // console.log(resultmsg)
+            showResult('Ball', computerChoice, resultmsg);
             ">Ball</button>
 
         <button class="stump" onclick="
-            console.log('You chose Stump!')
+            // console.log('You chose Stump!')
             //This will generate random no between 0 and 3
             generateComputerChoice();
-
             computerchoicemsg = 'Computer chose ' + computerChoice;
-
-            console.log('Computer chose ' + computerChoice)
-            if (computerChoice === 'Bat') {
-                resultmsg = 'You win!';
-            } else if (computerChoice === 'Ball') {
-                resultmsg = 'You lose!';
-            } else if (computerChoice === 'Stump') {
-                resultmsg = 'It\'s a tie!';
-            }
-
-            console.log(resultmsg)
-
-            alert(`You chose Stump!\nComputer chose ${computerChoice}.\n${resultmsg}`)
-
-
+            // console.log('Computer chose ' + computerChoice)
+            resultmsg = getResult('Stump', computerChoice);
+            // console.log(resultmsg)
+            showResult('Stump', computerChoice, resultmsg);
             ">Stump</button>
-
     </div>
-    <script src="index.js"></script>
+    <script src="index.js">
+    </script>
     </body>
 </html>

@@ -11,3 +11,21 @@ function generateComputerChoice() {
     }
     return computerChoice;
 }
+
+function getResult(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        return 'It\'s a tie!';
+    } else if (
+        (playerChoice === 'Bat' && computerChoice === 'Ball') ||
+        (playerChoice === 'Ball' && computerChoice === 'Stump') ||
+        (playerChoice === 'Stump' && computerChoice === 'Bat')
+    ) {
+        return 'You win!';
+    } else {
+        return 'You lose!';
+    }
+}
+
+function showResult(userChoice, computerChoice, result) {
+    alert(`You chose ${userChoice}!\nComputer chose ${computerChoice}.\n${result}`);
+}
