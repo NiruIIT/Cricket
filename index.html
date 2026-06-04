@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <H1>Bat Ball Stump Game</H1>
+    <div class="button">
+        
+        <button class="bat" onclick="
+            console.log('You chose Bat!')
+            //This will generate random no between 0 and 3
+            let randomNumber = Math.random() * 3;
+            let computerChoice;
+            let resultmsg;
+            if (randomNumber>0 && randomNumber<1) {
+                // console.log('Computer chose Bat!')
+                computerChoice = 'Bat';
+            } else if (randomNumber>1 && randomNumber<2) {
+                // console.log('Computer chose Ball!')
+                computerChoice = 'Ball';
+            } else if (randomNumber>2 && randomNumber<3) {
+                // console.log('Computer chose Stump!')
+                computerChoice = 'Stump';
+            }
+
+            const computerchoicemsg = 'Computer chose ' + computerChoice;
+
+            console.log('Computer chose ' + computerChoice)
+            if (computerChoice === 'Bat') {
+                resultmsg = 'It\'s a tie!';
+            } else if (computerChoice === 'Ball') {
+                resultmsg = 'You win!';
+            } else if (computerChoice === 'Stump') {
+                resultmsg = 'You lose!';
+            }
+            console.log(resultmsg)
+
+            alert(`You chose Bat!\nComputer chose ${computerChoice}.\n${resultmsg}`)
+
+
+            ">Bat</button>
+
+        <button class="ball" onclick="
+            console.log('You chose Ball!')
+            //This will generate random no between 0 and 3
+            randomNumber = Math.random() * 3;
+            // computerChoice;
+            // resultmsg;
+            if (randomNumber>0 && randomNumber<1) {
+                // console.log('Computer chose Bat!')
+                computerChoice = 'Bat';
+            } else if (randomNumber>1 && randomNumber<2) {
+                // console.log('Computer chose Ball!')
+                computerChoice = 'Ball';
+            } else if (randomNumber>2 && randomNumber<3) {
+                // console.log('Computer chose Stump!')
+                computerChoice = 'Stump';
+            }
+
+            computerchoicemsg = 'Computer chose ' + computerChoice;
+
+            console.log('Computer chose ' + computerChoice)
+            if (computerChoice === 'Bat') {
+                resultmsg = 'You lose!';
+            } else if (computerChoice === 'Ball') {
+                resultmsg = 'It\'s a tie!';
+            } else if (computerChoice === 'Stump') {
+                resultmsg = 'You win!';
+            }
+
+            console.log(resultmsg)
+
+            alert(`You chose Ball!\nComputer chose ${computerChoice}.\n${resultmsg}`)
+
+            ">Ball</button>
+
+        <button class="stump" onclick="
+            console.log('You chose Stump!')
+            //This will generate random no between 0 and 3
+            randomNumber = Math.random() * 3;
+            // computerChoice;
+            // resultmsg;
+            if (randomNumber>0 && randomNumber<1) {
+                // console.log('Computer chose Bat!')
+                computerChoice = 'Bat';
+            } else if (randomNumber>1 && randomNumber<2) {
+                // console.log('Computer chose Ball!')
+                computerChoice = 'Ball';
+            } else if (randomNumber>2 && randomNumber<3) {
+                // console.log('Computer chose Stump!')
+                computerChoice = 'Stump';
+            }
+
+            computerchoicemsg = 'Computer chose ' + computerChoice;
+
+            console.log('Computer chose ' + computerChoice)
+            if (computerChoice === 'Bat') {
+                resultmsg = 'You win!';
+            } else if (computerChoice === 'Ball') {
+                resultmsg = 'You lose!';
+            } else if (computerChoice === 'Stump') {
+                resultmsg = 'It\'s a tie!';
+            }
+
+            console.log(resultmsg)
+
+            alert(`You chose Stump!\nComputer chose ${computerChoice}.\n${resultmsg}`)
+
+
+            ">Stump</button>
+
+    </div>
+    <script></script>
+</body>
+</html>
