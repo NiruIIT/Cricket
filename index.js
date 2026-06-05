@@ -1,10 +1,25 @@
-let score = {
+let scoreStr=localStorage.getItem('Score');
+// let score;
+// if (scoreStr !== undefined){
+//     score = JSON.parse(scoreStr);
+// }else{
+//     let score = {
+//         wins: 0,
+//         losses: 0,
+//         ties: 0,
+//     };
+// }
+//OR
+let score = JSON.parse(localStorage.getItem('Score')) || {
     wins: 0,
     losses: 0,
     ties: 0,
-    displayScore: function(){
-        return `Won:${score.wins}, Lose:${score.losses}, Tie:${score.ties}`;
-    }
+};
+
+
+
+score.displayScore = function(){
+    return `Won:${score.wins}, Lose:${score.losses}, Tie:${score.ties}`;
 };
 
 let computerChoice;
@@ -39,6 +54,7 @@ function getResult(playerChoice, computerChoice) {
 }
 
 function showResult(userChoice, computerChoice, result) {
+    localStorage.setItem('Score', JSON.stringify(score));
     alert(`You chose ${userChoice}!\nComputer chose ${computerChoice}.\n${result}
         \n${score.displayScore()}`
     );
