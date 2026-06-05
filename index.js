@@ -11,6 +11,8 @@ function resetScore(scoreStr){
     score.displayScore = function(){
     return `Won:${score.wins}, Lose:${score.losses}, Tie:${score.ties}`;
     };
+    document.querySelector('.score').innerText = score.displayScore(); 
+    showResult();
 }
 
 // let score;
@@ -58,9 +60,14 @@ function getResult(playerChoice, computerChoice) {
 
 function showResult(userChoice, computerChoice, result) {
     localStorage.setItem('Score', JSON.stringify(score));
-    alert(`You chose ${userChoice}!\nComputer chose ${computerChoice}.\n${result}
-        \n${score.displayScore()}`
-    );
+    document.querySelector('.user-choice').innerText = userChoice !== undefined ? `You chose: ${userChoice}` : '';
+    document.querySelector('.computer-choice').innerText = computerChoice !== undefined ? `Computer chose: ${computerChoice}` : '';
+    document.querySelector('.result').innerText = result !== undefined ? result : '';
+    document.querySelector('.score').innerText = score.displayScore();
+
+    // alert(`You chose ${userChoice}!\nComputer chose ${computerChoice}.\n${result}
+    //     \n${score.displayScore()}`
+    // );
     
 }
 
