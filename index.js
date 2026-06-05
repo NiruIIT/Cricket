@@ -2,12 +2,12 @@ let scoreStr=localStorage.getItem('Score');
 let score;
 resetScore(scoreStr);
 function resetScore(scoreStr){
-    score = scoreStr ? JSON.parse(scoreStr) : {
+    score = scoreStr ? JSON.parse(scoreStr) : { 
         wins: 0,
         losses: 0,
         ties: 0,
     };
-    alert('Score has been reset!');
+    // alert('Score has been reset!');
     score.displayScore = function(){
     return `Won:${score.wins}, Lose:${score.losses}, Tie:${score.ties}`;
     };
