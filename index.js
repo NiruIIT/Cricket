@@ -1,4 +1,18 @@
 let scoreStr=localStorage.getItem('Score');
+let score;
+resetScore(scoreStr);
+function resetScore(scoreStr){
+    score = scoreStr ? JSON.parse(scoreStr) : {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+    };
+    alert('Score has been reset!');
+    score.displayScore = function(){
+    return `Won:${score.wins}, Lose:${score.losses}, Tie:${score.ties}`;
+    };
+}
+
 // let score;
 // if (scoreStr !== undefined){
 //     score = JSON.parse(scoreStr);
@@ -10,17 +24,6 @@ let scoreStr=localStorage.getItem('Score');
 //     };
 // }
 //OR
-let score = JSON.parse(localStorage.getItem('Score')) || {
-    wins: 0,
-    losses: 0,
-    ties: 0,
-};
-
-
-
-score.displayScore = function(){
-    return `Won:${score.wins}, Lose:${score.losses}, Tie:${score.ties}`;
-};
 
 let computerChoice;
 function generateComputerChoice() {
@@ -60,3 +63,4 @@ function showResult(userChoice, computerChoice, result) {
     );
     
 }
+
